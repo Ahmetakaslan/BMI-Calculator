@@ -3,7 +3,7 @@ flutter & dart.
 # if you want 
 #<a href="https://github.com/Ahmetakaslan/BMI-Calculator/raw/master/app-release.apk"    download="Bmi Calculator"><img src="[IMAGE_URL_OF_YOUR_BUTTON](https://icons8.com/icon/23359/downloading-updates)" alt="Download the app" style="width:200px;height:60px;"></a>
 
-
+<a href="https://github.com/Ahmetakaslan/BMI-Calculator/raw/master/app-release.apk" download="YOUR_FILE_NAME.apk"><img src="https://icons8.com/icon/23359/downloading-updates" alt="Download the app" style="width:200px;height:60px;"></a>
 
 # <a href="https://github.com/Ahmetakaslan/BMI-Calculator/raw/master/app-release.apk" download="Bmi Calculator">DOWNLOAD MY APP</a>
 
