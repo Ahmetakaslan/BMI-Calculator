@@ -1,6 +1,6 @@
 # bmi_31_3_2023
 flutter & dart.  
- 
+You can download= https://github.com/Ahmetakaslan/BMI-Calculator/raw/master/app-release.apk
  
 <img src = "https://user-images.githubusercontent.com/95686166/229309725-c9fd6db0-099c-462c-98b1-6f0c06270cfa.png" width="350" height="700">
 <img src = "https://user-images.githubusercontent.com/95686166/229309727-526fcc8f-47e1-4090-93e3-91e5c8257425.png" width="350" height="700">
