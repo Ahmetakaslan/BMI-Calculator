@@ -1,6 +1,6 @@
 # bmi_31_3_2023
 flutter & dart.  
-<a href="You can download" download="https://github.com/Ahmetakaslan/BMI-Calculator/raw/master/app-release.apk">DOWNLOAD YOUR APP</a>
+<a href="https://github.com/Ahmetakaslan/BMI-Calculator/raw/master/app-release.apk" download="https://github.com/Ahmetakaslan/BMI-Calculator/raw/master/app-release.apk">DOWNLOAD YOUR APP</a>
 You can download= https://github.com/Ahmetakaslan/BMI-Calculator/raw/master/app-release.apk
  
 <img src = "https://user-images.githubusercontent.com/95686166/229309725-c9fd6db0-099c-462c-98b1-6f0c06270cfa.png" width="350" height="700">
