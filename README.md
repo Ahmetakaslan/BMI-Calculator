@@ -5,7 +5,6 @@ flutter & dart.
 # if you want download
 
 
-https://github.com/Ahmetakaslan/BMI-Calculator/blob/master/app-release.apk
 <a href="https://github.com/Ahmetakaslan/BMI-Calculator/blob/master/app-release.apk" download="YOUR_FILE_NAME.apk"><img src="down.png" alt="Download the app" style="width:100px;height:70px;"></a>
 
 
