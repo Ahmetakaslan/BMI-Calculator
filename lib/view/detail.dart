@@ -1,7 +1,10 @@
-import 'package:bmi_31_3_2023/DataBaseHelper.dart';
-import 'package:bmi_31_3_2023/const.dart';
-import 'package:bmi_31_3_2023/healthOutcomes.dart';
+import 'package:bmi_31_3_2023/model/DataBaseHelper.dart';
+import 'package:bmi_31_3_2023/constants/const.dart';
+import 'package:bmi_31_3_2023/model/healthOutcomes.dart';
+import 'package:bmi_31_3_2023/view/calculateScreen.dart';
 import 'package:flutter/material.dart';
+
+import 'input_page.dart';
 
 class Detail extends StatefulWidget {
   const Detail({super.key});
@@ -20,7 +23,7 @@ class _DetailState extends State<Detail> {
         var first = list[index];
         var id = int.parse(first["id"].toString());
         var age = first["age"] as String;
-        var date = first["date"] as String;
+        var date = first["date"].toString().substring(0, 19) as String;
         var weight = first["weight"] as String;
         var height = first["height"] as String;
         var gender = first["gender"] as String;
@@ -45,9 +48,35 @@ class _DetailState extends State<Detail> {
   }
 
   Future<void> DeleteAll() async {
-    var db = await DataBaseHelper.connectToDatabase();
-    db.delete("BMI");
-    setState(() {});
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Are you sure want to delete all data?"),
+          actions: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("No"),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                var db = await DataBaseHelper.connectToDatabase();
+                db.delete("BMI");
+                setState(() {});
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => InputPage(),
+                    ));
+              },
+              child: Text("Yes"),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -84,13 +113,13 @@ class _DetailState extends State<Detail> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        defaultTexts(firstValue.date, "Date",Colors.black),
-                        defaultTexts(firstValue.status, "Status",Colors.red),
-                        defaultTexts(firstValue.value, "Value",Colors.black),
-                        defaultTexts(firstValue.gender, "Gender",Colors.black),
-                        defaultTexts(firstValue.age, "Age",Colors.black),
-                        defaultTexts(firstValue.height, "Height",Colors.black),
-                        defaultTexts(firstValue.weight, "Weight",Colors.black),
+                        defaultTexts(firstValue.date, "Date", Colors.black),
+                        defaultTexts(firstValue.status, "Status", Colors.red),
+                        defaultTexts(firstValue.value, "Value", Colors.black),
+                        defaultTexts(firstValue.gender, "Gender", Colors.black),
+                        defaultTexts(firstValue.age, "Age", Colors.black),
+                        defaultTexts(firstValue.height, "Height", Colors.black),
+                        defaultTexts(firstValue.weight, "Weight", Colors.black),
                         IconButton(
                           onPressed: () {
                             Delete(firstValue.id);
@@ -118,7 +147,6 @@ class _DetailState extends State<Detail> {
     String firstValue,
     String text,
     Color color,
-    
   ) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
@@ -127,7 +155,7 @@ class _DetailState extends State<Detail> {
         children: [
           Text(
             "$text",
-            style: defaultTextStyle(Colors.green  ),
+            style: defaultTextStyle(Colors.green),
           ),
           Text(
             "${firstValue}",
@@ -138,5 +166,6 @@ class _DetailState extends State<Detail> {
     );
   }
 
-  TextStyle defaultTextStyle(Color color) => TextStyle(color: color, fontSize: 16);
+  TextStyle defaultTextStyle(Color color) =>
+      TextStyle(color: color, fontSize: 16);
 }

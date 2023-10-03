@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:bmi_31_3_2023/Default/d_ContainerChaild.dart';
 import 'package:bmi_31_3_2023/Default/default_Container.dart';
-import 'package:bmi_31_3_2023/calculateScreen.dart';
-import 'package:bmi_31_3_2023/const.dart';
+import 'package:bmi_31_3_2023/view/calculateScreen.dart';
+import 'package:bmi_31_3_2023/constants/const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -16,7 +16,7 @@ enum Gender {
 enum AddRemove { addWeight, removeWeight, addAge, removeAge }
 
 class InputPage extends StatefulWidget {
-  const InputPage();
+   InputPage();
   @override
   State<InputPage> createState() => _InputPageState();
 }

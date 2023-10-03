@@ -1,7 +1,7 @@
-import 'package:bmi_31_3_2023/DataBaseHelper.dart';
-import 'package:bmi_31_3_2023/detail.dart';
-import 'package:bmi_31_3_2023/const.dart';
-import 'package:bmi_31_3_2023/input_page.dart';
+import 'package:bmi_31_3_2023/model/DataBaseHelper.dart';
+import 'package:bmi_31_3_2023/view/detail.dart';
+import 'package:bmi_31_3_2023/constants/const.dart';
+import 'package:bmi_31_3_2023/view/input_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
