@@ -36,7 +36,7 @@ class _DetailState extends State<Detail> {
             status: status,
             value: value);
       },
-    );
+    ).reversed.toList();
   }
 
   Future<void> Delete(int id) async {
