@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="KelimeDefterim.bmi_31_3_2023">
     <application
-        android:label="bmi_31_3_2023"
+        android:label="Bmi calculator"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
