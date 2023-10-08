@@ -58,6 +58,7 @@ class _InputPageState extends State<InputPage> {
   int height = 90;
   int weight = 50;
   int age = 30;
+  int firstValue=50;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -126,6 +127,10 @@ class _InputPageState extends State<InputPage> {
                       SliderTheme(
                         data: SliderThemeData(thumbColor: Colors.yellow),
                         child: Slider(
+                          
+                          divisions: 290,
+                          label:"$firstValue",
+                          
                           min: 0,
                           max: 290,
                           activeColor: Color.fromARGB(255, 240, 47, 33),
@@ -135,6 +140,7 @@ class _InputPageState extends State<InputPage> {
                             print(height);
                             setState(
                               () {
+                                firstValue=value.round();
                                 height = value.round();
                               },
                             );
